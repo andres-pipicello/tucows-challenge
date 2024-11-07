@@ -1,0 +1,19 @@
+services:
+
+  db:
+    image: postgres
+    restart: always
+    shm_size: 1024mb
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: tucows
+    ports:
+      - "5432:5432"
+
+  static-files:
+    image: nginx
+    volumes:
+      - ./data:/usr/share/nginx/html
+    ports:
+      - "8282:80"

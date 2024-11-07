@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "tucows-challenge"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+xsdata = {extras = ["cli", "lxml", "soap"], version = "^24.9"}
+lxml = "^5.3.0"
+sqlalchemy = "^2.0.36"
+loguru = "^0.7.2"
+psycopg2 = "^2.9.10"
+dataclasses-json = "^0.6.7"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
